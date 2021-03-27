@@ -1,0 +1,5 @@
+Daftar nama customer di Albuquerque pada tahun 2017 antara lain:Benjamin Farhat
+David Wiener
+Michelle Lonsdale
+Susan Vittorini
+Wilayah bagian (region) yang memiliki total keuntungan (profit) yang paling sedikit adalah Central dengan total keuntungan 39243,000000

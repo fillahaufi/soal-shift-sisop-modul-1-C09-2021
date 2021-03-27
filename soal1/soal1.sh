@@ -1,1 +1,0 @@
-aowkoakwokawokaw masih kosong bang 

@@ -59,4 +59,9 @@ ERROR1
 ![image](https://user-images.githubusercontent.com/63279983/113287856-546f2380-9318-11eb-911a-64825fa71358.png)
 
 
-Soal 1e.
+#### Soal 1e. ####
+
+### Kendala ###
+- Masih belum cukup mengerti cara kerja linux terminal
+- Awam dengan linux
+- Tidak tahu keyword di google untuk mencari referensi

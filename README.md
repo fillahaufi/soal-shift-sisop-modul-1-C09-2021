@@ -12,6 +12,7 @@
   ```
 4. Fungsi tersebut akan membuat beberapa field yang dibatasi oleh limiter “:” ditunjukkan oleh -d “:” dan mengambil field ke-4 yang ditunjukkan oleh -f 4
 5. Contoh output = 
+
 ![image](https://user-images.githubusercontent.com/63279983/113287716-22f65800-9318-11eb-8457-5b492e6f3fa2.png)
 
 
@@ -24,6 +25,7 @@
   ```
 4. Setelah menjalankan fungsi yang sama seperti soal 1a, fungsi selanjutnya adalah grep ERROR yang berarti mereturn semua ERROR pada log file, setelah itu melakukan cut lagi untuk menghilangkan username, menjalankan fungsi sort untuk sorting dan uniq -c untuk menghitung banyaknya error yang sama tiap error message
 5. Output = 
+
 ![image](https://user-images.githubusercontent.com/63279983/113287755-330e3780-9318-11eb-85ae-7eb6e45ec612.png)
 
 
@@ -35,6 +37,7 @@
   2.Untuk INFO = cut -d “:” -f 4 syslog.log | grep INFO | cut -d “(“ -f2 | cut -d “)” -f1 | sort | uniq -c
 4. Logika yang dijalankan hampir sama seperti sub soal sebelumnya, pertama untuk mendapatkan jumlah ERROR tiap user kita grep dahulu semua error yang ada, lalu cut untuk mengambil username, lalu uniq -c untuk menghitung jumlahnya, begitu juga untuk mendapatkan jumlah INFO
 5. Output =
+
 ![image](https://user-images.githubusercontent.com/63279983/113287792-40c3bd00-9318-11eb-925b-b4ffd3c6a386.png)
 ![image](https://user-images.githubusercontent.com/63279983/113287814-48836180-9318-11eb-8d03-d05162ef7516.png)
 
@@ -52,6 +55,7 @@ ERROR1
 ```
 4. Pada nomor ini saya masih belum bisa menggunakan algoritma dalam menampilkan dan masih menggunakan grep secara manual untuk tiap error message
 5. Output = 
+
 ![image](https://user-images.githubusercontent.com/63279983/113287856-546f2380-9318-11eb-911a-64825fa71358.png)
 
 

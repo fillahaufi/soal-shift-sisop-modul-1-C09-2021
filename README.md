@@ -86,3 +86,61 @@ echo "create info_error.csv"
 - Masih belum cukup mengerti cara kerja linux terminal
 - Awam dengan linux
 - Tidak tahu keyword di google untuk mencari referensi
+
+
+## Soal 2 ##
+### Pengerjaan ###
+#### Soal 2a. ####
+1. Diminta untuk mencari Row ID dan Profit Percentage terbesar(Jika ada profit percentage terbesar lebih dari 1, cari yang Row ID 
+terbesar).
+2. Profit Percentage =
+  ```
+  (Profit / Cost Price) * 100
+  ```
+3. Cost Price =
+  ```
+  Sales - Profit
+  ```
+4. Dicek dulu apakah Row ID bukan 1(karena row tersebut untuk penentuan identitas kategori)
+5. Diambil nilai profit dan sales di tiap row(column 21 dan 18)
+6. Kemudian dikurangi untuk mendapatkan cost price. Kemudian dicari Profit percentage menggunakan rumus di step 2
+7. Kemudian dibandingkan nilai profit percentage sekarang dengan maksimal. Jika melebihi maksimal, maka profit percentage sekarang menjadi maksimal dan diambil row ID nya.
+8. Kemudian hasilnya di print dan disimpan ke hasil.txt
+
+#### Soal 2b. ####
+1. Dicari nama customer pada transaksi tahun 2017 di Albuquerque
+2. Untuk memfilter tanggal bisa menggunakan /[0-9][0-9]-[0-9][0-9]-17/
+3. Kemudian diambil lokasi nya (column 10) dan dicek apakah sama dengan Albuquerque, jika ya, maka dimasukkan array untuk menyimpan nama customer (column 7)
+4. Setelah itu, print hasil array nama customer dan simpan ke hasil.txt
+
+#### Soal 2c. ####
+1. Diminta mencari segment customer dan jumlah transaksinya paling sedikit.
+2. Dicek dulu apakah Row ID bukan 1(karena row tersebut untuk penentuan identitas kategori). Kemudian diambil array nama segment customer (column 8).
+3. Dibandingkan jumlah transaksi customer dengan minimal. Jika lebih kecil dari minima, maka segment customer menjadi minimal dan diambil tag namanya.
+4. Setelah itu, print nama segment customer terkecil dan jumlah transaksinya. SImpan hasilnya ke hasil.txt
+
+#### Soal 2d. ####
+1. Diminta mencari region dengan total keuntungan (profit paling sedikit) dan total keuntungan wilayah tersebut.
+2. Dicek dulu apakah Row ID bukan 1(karena row tersebut untuk penentuan identitas kategori). Kemudian diambil array nama region (column 13) dan ditambahkan dengan profit (column)
+3. Dibandingkan jumlah total keuntungan (profit) dengan minimal. Jika lebih kecil dari minima, maka region tersebut menjadi minimal dan diambil tag namanya.
+4. Setelah itu, print nama regio total keuntungan terkecil dan total keuntungan. SImpan hasilnya ke hasil.txt
+
+### Kendala ###
+- Masih kurang tahu dalam penggunaan linux dan shell
+- Error berkali-kali
+- Kurang tahu dalam mengoperasikan terminal linux 
+
+
+## Soal 3 ##
+### Pengerjaan ###
+#### Soal 3a. ####
+
+#### Soal 3b. ####
+
+#### Soal 3c. ####
+
+#### Soal 3d. ####
+
+#### Soal 3e. ####
+
+### Kendala ###

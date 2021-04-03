@@ -52,4 +52,12 @@ printf "Tried to add information to closed ticket,"
 ERROR6
 printf "\n"
 printf "soal 1e. Username,INFO,ERROR csv : \n"
-
+username=`cat syslog.log | cut -d "(" -f2 | cut -d ")" -f1 | sort | uniq`
+echo "$username" |
+while read jml 
+do
+	infosum=`cat syslog.log | grep -o "INFO.*($jml)" | wc -l`
+	errorsum=`cat syslog.log | grep -o "ERROR.*($jml)" | wc -l`
+	echo "$jml,$infosum,$errorsum"
+done | sed '1 i\Username,INFO,ERROR' > info_error.csv
+echo "create info_error.csv"

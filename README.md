@@ -60,6 +60,27 @@ ERROR1
 
 
 #### Soal 1e. ####
+1. Diminta menampilkan Usernaame,INFO,ERROR dalam bentuk csv
+2. Fungsi yang digunakan hampir sama seperti soal - soal sebelumnya
+3. fungsi yang dijalankan =
+```
+username=`cat syslog.log | cut -d "(" -f2 | cut -d ")" -f1 | sort | uniq`
+echo "$username" |
+while read jml
+do
+	infosum=`cat syslog.log | grep -o "INFO.*($jml)" | wc -l`
+	errorsum=`cat syslog.log | grep -o "ERROR.*($jml)" | wc -l`
+	echo "$jml,$infosum,$errorsum"
+done | sed '1 i\Username,INFO,ERROR' > info_error.csv
+echo "create info_error.csv"
+```
+4. variable $username untuk mendapat username, setelah itu dilakukan looping tiap username menggunakan while untuk mendapatkan jumlah info dan error tiap username nya. meethod sed berfungsi untuk menambahkan row line secara manual pada csv file dan echo dimaksudnya untuk memberikan flash message pada pengguna
+5. output = 
+
+![image](https://user-images.githubusercontent.com/63279983/113467024-809ab980-946a-11eb-8731-a28f920763de.png)
+![image](https://user-images.githubusercontent.com/63279983/113467035-927c5c80-946a-11eb-8117-3487ef733e19.png)
+![image](https://user-images.githubusercontent.com/63279983/113467046-a2943c00-946a-11eb-83e7-92f8304d8dd9.png)
+
 
 ### Kendala ###
 - Masih belum cukup mengerti cara kerja linux terminal

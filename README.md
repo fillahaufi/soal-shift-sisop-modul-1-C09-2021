@@ -125,6 +125,10 @@ terbesar).
 3. Dibandingkan jumlah total keuntungan (profit) dengan minimal. Jika lebih kecil dari minima, maka region tersebut menjadi minimal dan diambil tag namanya.
 4. Setelah itu, print nama regio total keuntungan terkecil dan total keuntungan. SImpan hasilnya ke hasil.txt
 
+### Screenshot hasil.txt ###
+![soal2_generate_laporan_ihir_shisop sh - soal-shift-sisop-modul-1-C09-2021 - Visual Studio Code 4_4_2021 7_36_15 PM](https://user-images.githubusercontent.com/68325900/113509139-21c66480-957e-11eb-9bd0-5527a100c843.png)
+
+
 ### Kendala ###
 - Masih kurang tahu dalam penggunaan linux dan shell
 - Error berkali-kali

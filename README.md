@@ -169,7 +169,17 @@ done
 #### Soal 3c. ####
 
 #### Soal 3d. ####
-
+1. Diminta untuk mengamankan koleksi foto dan membuat script yang akan memindahkan seluruh folder ke zip yang diberi nama “Koleksi.zip” dan mengunci zip tersebut dengan password berupa tanggal saat ini dengan format "MMDDYYYY"
+```
+now=$(date +"%m%d%Y")
+zip -P $now Koleksi.zip -r ./Kelinci* ./Kucing*
+```
 #### Soal 3e. ####
-
+1. Diminta untuk membuat koleksinya ter-zip dari jam 7-18 saat kuliah saja dihari Senin-Jumat, selain dari waktu yang disebutkan, ia ingin koleksinya ter-unzip dan tidak ada file zip sama sekali.
+```
+now=date +%m%d%Y
+0 7 * * 1-5 zip Koleksi.zip -P $($now) -r ./Kucing* ./Kelinci* && rm -r ./Kucing_* ./Kelinci_*
+0 18 * * 1-5 unzip -P $($now) Koleksi.zip && rm -r Koleksi.zip
+```
 ### Kendala ###
+- Masih kurang mengerti tentang penggunaan crontab

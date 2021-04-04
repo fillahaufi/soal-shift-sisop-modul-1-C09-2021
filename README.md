@@ -134,7 +134,29 @@ terbesar).
 ## Soal 3 ##
 ### Pengerjaan ###
 #### Soal 3a. ####
-
+1. Diminta membuat script untuk mengunduh 23 gambar dari "https://loremflickr.com/320/240/kitten" serta menyimpan log-nya ke file Foto.log
+2. Menggunakan fungsi ``` wget -a $PWD/Foto.log -O $PWD/"Koleksi_0$i" https://loremflickr.com/320/240/kitten ``` untuk mengunduh gambar serta menyimpan log-nya ke file Foto.log
+3. Menggunakan fungsi ``` loc_img=($(awk '/Location/ {print $2}' $PWD/Foto.log)) ``` untuk mendapat alamat dari gambar yang diunduh
+4. Menggunakan looping untuk mengecek dan menghapus kemungkinan ada gambar yang sama
+5. Kemudian menyimpan gambar - gambar tersebut dengan nama "Koleksi_XX"
+```
+loc_img=($(awk '/Location/ {print $2}' $PWD/Foto.log))
+for ((i=0; i<23; i++))
+do
+for ((j=0; j<=i; j++))
+do 
+if [[ "$j" != "$i" && "${loc_img[$j]}" == "${loc_img[$i]}" ]]; then
+	count=$((j+1))	
+	if [ $count -le 9 ];
+	then 
+	rm -f $PWD/Koleksi_0$count
+	else	
+	rm -f $PWD/Koleksi_$count
+	fi
+fi
+done
+done
+```
 #### Soal 3b. ####
 
 #### Soal 3c. ####

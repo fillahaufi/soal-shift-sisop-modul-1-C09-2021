@@ -167,7 +167,27 @@ done
 3. Memindahkan gambar yang telah diunduh beserta log-nya ke folder dengan format ""DD-MM-YYYY"
 
 #### Soal 3c. ####
+1. Diminta untuk mengunduh gambar kelinci dari "https://loremflickr.com/320/240/bunny", kemudian gambar tersebut diunduh secara bergantian per-hari dengan gambar kucing
+2. Membedakan folder yang berisi gambar dengan nama folder diberi awalan "Kucing_" atau "Kelinci_"
+```
+now=$(date +"%d-%m-%Y")
+yes=$(date -d yesterday +"%d-%m-%Y")
 
+kelinci_yes="$PWD/Kelinci_$yes"
+if [ -d "$kelinci_yes" ] 
+then 
+mkdir "Kucing_$now"
+
+mv ./Koleksi_* "./Kucing_$now"
+mv ./Foto.log "./Kucing_$now"
+
+else
+mkdir "Kelinci_$now"
+
+mv ./Koleksi_* "./Kelinci_$now"
+mv ./Foto.log "./Kelinci_$now"
+fi
+```
 #### Soal 3d. ####
 1. Diminta untuk mengamankan koleksi foto dan membuat script yang akan memindahkan seluruh folder ke zip yang diberi nama “Koleksi.zip” dan mengunci zip tersebut dengan password berupa tanggal saat ini dengan format "MMDDYYYY"
 ```

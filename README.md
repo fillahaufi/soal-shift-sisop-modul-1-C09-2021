@@ -158,6 +158,9 @@ done
 done
 ```
 #### Soal 3b. ####
+1. Diminta untuk menjalankan script tersebut sehari sekali pada jam 8 malam dari tanggal 1 tujuh hari sekali serta dari tanggal 2 empat hari sekali
+2. Menggunakan crontab ``` 0 20 1-31/7,2-31/4 * * bash /home/fajrinam/soal3b.sh ```
+3. Memindahkan gambar yang telah diunduh beserta log-nya ke folder dengan format ""DD-MM-YYYY"
 
 #### Soal 3c. ####
 
